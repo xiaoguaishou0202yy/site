@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Zhiyi Li's Portfolio - Projects</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/portfolio.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <span>Zhiyi Li</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="index.html">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="portfolio.html">Portfolio</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="skills.html">Skills</a></div>
+                <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="#">Let's Talk!</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="skills.html">Skills</a>
+                <a href="">Let's Talk!</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="portfolio-container">
+        <!-- Left Side - Services Menu -->
+        <div class="services-menu" data-aos="fade-right">
+            <div class="dropdown-toggle">CATEGORIES</div>
+            <div class="service-items">
+            <div class="service-item active">Static Maps</div>
+            <div class="service-item">Web Applications</div>
+            <div class="service-item">All Projects</div>
+            </div>
+        </div>
+
+
+        <!-- Right Side - Project Grid -->
+        <div class="projects-content">
+            <!-- Static Maps Category -->
+            <div class="category-section" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="img/Info.png" alt="California Wildfires" onclick="openModal('Info')">
+                        <div class="project-content">
+                            <h3>California Wildfires in the 21st Century</h3>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="img/Job.png" alt="Find A Job In the U.S" onclick="openModal('Job')">
+                        <div class="project-content">
+                            <h3>Find A Job in the U.S.?</h3>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="img/Helm.png" alt="The Battle of Helm's Deep" onclick="openModal('Helm')">
+                        <div class="project-content">
+                            <h3>The Battle of Helm's Deep</h3>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="img/France_Atlas.png" alt="Frances Atlas" onclick="openModal('France')">
+                        <div class="project-content">
+                            <h3>Frances Atlas</h3>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="img/Africa.png" alt="Africa's Natural Geography" onclick="openModal('Africa')">
+                        <div class="project-content">
+                            <h3>Africa's Natural Geography</h3>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="img/Alabama.png" alt="Alabama Football Teams" onclick="openModal('Alabama')">
+                        <div class="project-content">
+                            <h3>Alabama Football Teams</h3>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="img/Multivariate.png" alt="Multivariate Map" onclick="openModal('Multivariate',)">
+                        <div class="project-content">
+                            <h3>Population Density and Unemployment Rate in U.S., 2018</h3>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="img/Watershed.png" alt="Watershed Analysis" onclick="openModal('Watershed')">
+                        <div class="project-content">
+                            <h3>Las Vegas Watershed and Detrital Watershed Analysis</h3>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="img/Poster.png" alt="Poster Example on Australia's Bushfires" onclick="openModal('Poster',src)">
+                        <div class="project-content">
+                            <h3>Poster Example on Australia's Bushfires</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Web Applications Category -->
+            <div class="category-section" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <a href="https://experience.arcgis.com/experience/42b7b423a945473093d514162dfb3f51/?org=UW-Mad" target="_blank" class="project-link">
+                            <img src="img/911_Call.png" alt="911 Call Incident Map">
+                            <div class="project-content">
+                                <h3>911 Call Incident Map</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <a href="https://storymaps.arcgis.com/stories/c3e3fd50d3a5484fa0a425d20a74552d" target="_blank" class="project-link">
+                            <img src="img/Immigration.png" alt="Immigration in the U.S.">
+                            <div class="project-content">
+                                <h3>Immigration in the U.S.</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <a href="https://xiaoguaishou0202yy.github.io/agolcollector/" target="_blank" class="project-link">
+                            <img src="img/Travel_Intention.png" alt="Travel Intentions Web App">
+                            <div class="project-content">
+                                <h3>Travel Intentions Web App</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <a href="https://unageodept.maps.arcgis.com/apps/MapSeries/index.html?appid=58f929fa21fc460dbdde9ffbbb5c291c" target="_blank" class="project-link">
+                            <img src="img/SD_Crime.png" alt="San Diego Crime Analysis">
+                            <div class="project-content">
+                                <h3>San Diego Crime Analysis</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <a href="https://www.arcgis.com/apps/dashboards/9cdf59230d4d497c9ab9eb53686a0cb5" target="_blank" class="project-link">
+                            <img src="img/311_Incidents.png" alt="311 Incidents Reported Dashboard">
+                            <div class="project-content">
+                                <h3>311 Incidents Reported Dashboard</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <a href="https://storymaps.arcgis.com/stories/6f1bc9eeb6ba407eafcbf577bdd27882" target="_blank" class="project-link">
+                            <img src="img/Crime_Major_Cities.png" alt="US Population and Crime Rate">
+                            <div class="project-content">
+                                <h3>Story of US Population and Crime Rate in Major cities</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <a href="https://unageodept.maps.arcgis.com/apps/instant/slider/index.html?appid=26dd06680669465190f840a59cdc413b" target="_blank" class="project-link">
+                            <img src="img/Covid-19_Confirmed.png" alt="Covid-19 Confirmed Global">
+                            <div class="project-content">
+                                <h3>Covid-19 Confirmed Global</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <a href="https://github.com/xiaoguaishou0202yy/flight_tracking?tab=readme-ov-file" target="_blank" class="project-link">
+                            <img src="img/FlightTracker.png" alt="FlightTracker Web App">
+                            <div class="project-content">
+                                <h3>FlightTracker Web App</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <a href="https://xiaoguaishou0202yy.github.io/Madison-Crime-Incident-Map/" target="_blank" class="project-link">
+                            <img src="img/Madison_Crime.png" alt="Madison Crime Incident Map">
+                            <div class="project-content">
+                                <h3>Madison Crime Incident Map</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <a href="https://experience.arcgis.com/experience/eb84a72952e64433912b065a09ba6d3b/" target="_blank" class="project-link">
+                            <img src="img/2017_US_Population.png" alt="Study of 2017 US Population">
+                            <div class="project-content">
+                                <h3>Study of 2017 US Population</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <a href="https://xiaoguaishou0202yy.github.io/unit-3/" target="_blank" class="project-link">
+                            <img src="img/Crime.png" alt="Violent Crime Rate in the United States, 2022">
+                            <div class="project-content">
+                                <h3>Violent Crime Rate in the United States, 2022</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <a href="https://storymaps.arcgis.com/stories/2a0ec713805849258b0299d4f6231784" target="_blank" class="project-link">
+                            <img src="img/China.png" alt="Impression and Attractiveness of Some Cities in China">
+                            <div class="project-content">
+                                <h3>Impression and Attractiveness of Some Cities in China</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="Project Image">
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
+    <footer data-aos="fade-up" data-aos-duration="1000">
+        <div class="footer-content">
+            Copyright © 2024 Zhiyi Li. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({offset:0});
+
+        // Category filtering functionality
+        document.querySelectorAll('.service-item').forEach(item => {
+            item.addEventListener('click', () => {
+                // Remove active class from all items
+                document.querySelectorAll('.service-item').forEach(i => i.classList.remove('active'));
+                // Add active class to clicked item
+                item.classList.add('active');
+                
+                // Get category name
+                const category = item.textContent.trim();
+                
+                // Get all category sections
+                const staticMapsSection = document.querySelector('.category-section:nth-child(1)');
+                const webAppsSection = document.querySelector('.category-section:nth-child(2)');
+
+
+                document.querySelectorAll('.category-section').forEach(section => {
+                    section.classList.remove('aos-animate');
+                });
+                
+                // Show/hide sections based on selected         
+                switch(category) {
+                    case 'Static Maps':
+                        staticMapsSection.style.opacity = '0';
+                        webAppsSection.style.opacity = '0';
+                        setTimeout(() => {
+                            staticMapsSection.style.display = 'block';
+                            webAppsSection.style.display = 'none';
+                            setTimeout(() => {
+                                staticMapsSection.style.opacity = '1';
+                                staticMapsSection.classList.add('aos-animate');
+                            }, 50);
+                        }, 300);
+                        break;
+                    case 'Web Applications':
+                        staticMapsSection.style.opacity = '0';
+                        webAppsSection.style.opacity = '0';
+                        setTimeout(() => {
+                            staticMapsSection.style.display = 'none';
+                            webAppsSection.style.display = 'block';
+                            setTimeout(() => {
+                                webAppsSection.style.opacity = '1';
+                                webAppsSection.classList.add('aos-animate');
+                            }, 50);
+                        }, 300);
+                        break;
+                    case 'All Projects':
+                    default:
+                        staticMapsSection.style.opacity = '0';
+                        webAppsSection.style.opacity = '0';
+                        setTimeout(() => {
+                            staticMapsSection.style.display = 'block';
+                            webAppsSection.style.display = 'block';
+                            setTimeout(() => {
+                                staticMapsSection.style.opacity = '1';
+                                webAppsSection.style.opacity = '1';
+                                staticMapsSection.classList.add('aos-animate');
+                                webAppsSection.classList.add('aos-animate');
+                            }, 50);
+                        }, 300);
+                        break;
+                }
+
+                AOS.refresh();
+
+                setTimeout(() => {
+                    window.dispatchEvent(new Event('resize'));
+                }, 350);
+            });
+        });
+
+        function openModal(id) {
+            // Find the clicked project card using the image's onclick attribute
+            const projectCard = document.querySelector(`img[onclick*="${id}"]`).closest('.project-card');
+            
+            // Extract information from the project card
+            const image = projectCard.querySelector('img').src;
+            const title = projectCard.querySelector('h3').textContent;
+            const description = projectCard.querySelector('img').alt;
+            
+            // Set modal content
+            document.getElementById('modalImage').src = image;
+            document.getElementById('modalTitle').textContent = title;
+            document.getElementById('modalDescription').textContent = description;
+            
+            document.getElementById('projectModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('projectModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.querySelector('.dropdown-toggle').addEventListener('click', function(e) {
+            document.querySelector('.services-menu').classList.toggle('active');
+            e.stopPropagation();
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.services-menu')) {
+                document.querySelector('.services-menu').classList.remove('active');
+            }
+        });
+    </script>
+    <script>
+        function hamburg(){
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(0px)"
+        }
+        function cancel(){
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(-500px)"
+        }
+    </script>
+    
+</body>
+</html>

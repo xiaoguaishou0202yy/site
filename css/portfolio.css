@@ -1,0 +1,228 @@
+.portfolio-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    margin: 0;
+    min-height: calc(100vh - 60px);
+    margin-top:60px;
+    max-width: 1536px;
+}
+
+
+.services-menu {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    width:250px;
+    top: calc(60px+2rem);
+    overflow-y: auto;
+    margin-left:100px;
+    height: fit-content;
+}
+
+
+.service-item {
+    padding: 1rem;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #666;
+    border-radius: 4px;
+}
+
+.service-item:hover, .service-item.active {
+    background: #f8f9fa;
+    color: #333;
+}
+
+
+.projects-content {
+    position: relative;
+    padding-right:100px;
+    margin-right:100px;
+    left: 100px;
+    min-height:100%;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom:2rem;
+}
+
+.category-section {
+    margin-bottom: 0rem;
+    transition: opacity 0.3s ease;
+}
+
+.category-section[style*="display: none"] {
+    display: none !important; /* Ensure hidden sections don't affect layout */
+}
+
+
+.project-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 1.5rem;
+    grid-auto-flow: dense;
+    gap: 2rem;
+}
+
+.project-content h3 {
+    margin: 0 0 0.5rem 0;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.project-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-link:hover {
+    text-decoration: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 1000;
+}
+
+.modal.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#modalImage {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio-container {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        margin-top: 50px;
+        min-height: calc(100vh - 50px);
+    }
+
+    .services-menu {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        margin: 0;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        border-radius: 0;
+        background: #fff;
+        z-index: 1;
+    }
+
+    .service-items {
+        height: auto;
+        max-height: none;
+        overflow: visible;
+    }
+
+    .services-menu.active .service-items {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        padding: 0.5rem;
+    }
+
+    .dropdown-toggle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem;
+        cursor: pointer;
+        color: #333;
+    }
+
+    .dropdown-toggle::after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid currentColor;
+        margin-left: 0.5rem;
+        transition: transform 0.3s ease;
+    }
+
+    .services-menu.active .dropdown-toggle::after {
+        transform: rotate(180deg);
+    }
+
+    .projects-content {
+        z-index:-999;
+        left:10vh;
+        right:10vh;
+        margin-right:0;
+        padding-top: 60px; 
+        position:absolute;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .dropdown-toggle {
+        display: none;
+    }
+    
+    .service-items {
+        display: block !important;
+    }
+}
