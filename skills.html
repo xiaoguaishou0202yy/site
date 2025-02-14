@@ -111,6 +111,19 @@
                 <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="portfolio.html">Portfolio</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="skill.html">Skills</a></div>
                 <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="#">Let's Talk!</a></div>
+                <div id="contactTooltip" class="tooltip-container">
+                    <div class="tooltip-arrow"></div>
+                    <div class="tooltip-content">
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:xiaoguaishou0202yy@gmail.com">xiaoguaishou0202yy@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="tel:+8615250055212">+86 15250055212</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
         </div>
@@ -220,6 +233,39 @@
             const navbar = document.querySelector(".dropdown")
             navbar.style.transform = "translateY(-500px)"
         }
+    </script>
+
+    <script>
+        const contactBtn = document.querySelector('.contact-btn');
+        const tooltip = document.getElementById('contactTooltip');
+        let isTooltipVisible = false;
+
+        contactBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (!isTooltipVisible) {
+                tooltip.style.display = 'block';
+                isTooltipVisible = true;
+            } else {
+                tooltip.style.display = 'none';
+                isTooltipVisible = false;
+            }
+        });
+
+        // Close tooltip when clicking outside
+        document.addEventListener('click', function(e) {
+            if (isTooltipVisible && !tooltip.contains(e.target) && !contactBtn.contains(e.target)) {
+                tooltip.style.display = 'none';
+                isTooltipVisible = false;
+            }
+        });
+
+        // Close tooltip with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && isTooltipVisible) {
+                tooltip.style.display = 'none';
+                isTooltipVisible = false;
+            }
+        });
     </script>
 </body>
 </html>

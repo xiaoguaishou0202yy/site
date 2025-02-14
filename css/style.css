@@ -363,62 +363,79 @@ footer {
 }
 
 
+
+
+
 .tooltip-container {
     display: none;
     position: absolute;
-    top: 100%;
-    right: 4rem;
-    margin-top: 10px;
+    top: 88%;
+    margin-top: 12px;
     z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .tooltip-arrow {
     position: absolute;
     top: -8px;
-    right: 80px;
+    right: 20px;
     width: 0;
     height: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
     border-bottom: 8px solid white;
-    filter: drop-shadow(0 -1px 1px rgba(0,0,0,0.1));
 }
 
 .tooltip-content {
-    background-color: white;
-    padding: 1rem 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    min-width: 220px;
+    background: white;
+    padding: 0.8rem 1.4rem;
+    border-radius: 12px;
+    border-width: 2px;
+    border-color:#9443ac;
+    box-shadow: 0 4px 20px #9443ac;
+    min-width: 250px;
 }
 
 .contact-item {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    padding: 0.5rem 0;
+    padding: 0.2rem 0;
+}
+
+.contact-item:first-child {
+    margin-bottom: 0.5rem;
 }
 
 .contact-item i {
-    color: #666;
-    font-size: 1rem;
+    color: #9443ac;
+    font-size: 1.1rem;
 }
 
 .contact-item a {
-    color: #333;
+    color: black;
     text-decoration: none;
-    font-size: 0.2rem;
-    transition: color 0.3s ease;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
 }
 
 .contact-item a:hover {
-    color: #007bff;
+    color: rgba(255, 255, 255, 0.8);
+    transform: translateX(3px);
 }
 
-/* Make the contact button position relative for tooltip positioning */
-.contact-btn {
-    position: relative;
-}
 
 @media (max-width: 768px) {
     .tooltip-container {
@@ -439,5 +456,3 @@ footer {
         transform: translateX(50%);
     }
 }
-
-
