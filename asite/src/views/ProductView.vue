@@ -1,15 +1,15 @@
 <script setup>
 
 import Header from '../components/header/Header.vue'
+import Footer from '../components/footer/Footer.vue'
+import Unobox from '../components/product/Unobox.vue'
 </script>
 
 
 <template>
   <Header></Header>
-  <div class="product">
-    <h1>This is an about page</h1>
-    <p>产品介绍</p>
-  </div>
+  <Unobox></Unobox>
+  <Footer></Footer>
 </template>
 
 <style>
