@@ -1,6 +1,7 @@
 <script setup>
 
 import Header from '../components/header/Header.vue'
+import Footer from '../components/footer/Footer.vue'
 </script>
 
 
@@ -10,6 +11,7 @@ import Header from '../components/header/Header.vue'
     <h1>This is an about page</h1>
     <p>公司介绍</p>
   </div>
+  <Footer></Footer>
 </template>
 
 <style>
