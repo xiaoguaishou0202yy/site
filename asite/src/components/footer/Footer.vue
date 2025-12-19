@@ -94,7 +94,7 @@
 <style scoped>
 .footer {
   width: 100%;
-  background-color: #3a4049;
+  background-color: rgb(232,232,232);
   color: #fff;
   padding: 60px 0 30px;
 }
@@ -129,7 +129,7 @@
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 20px;
-  color: #fff;
+  color: rgba(44,45,40);;
 }
 
 .footer-column ul {
@@ -143,14 +143,14 @@
 }
 
 .footer-column a {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(44,45,40, 0.7);
   text-decoration: none;
   font-size: 14px;
   transition: color 0.3s;
 }
 
 .footer-column a:hover {
-  color: #fff;
+  color: rgba(44,45,40);;
 }
 
 /* 社交图标 */
@@ -194,14 +194,14 @@
 }
 
 .footer-links a {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(44,45,40, 0.6);
   text-decoration: none;
   font-size: 13px;
   transition: color 0.3s;
 }
 
 .footer-links a:hover {
-  color: #fff;
+  color: rgba(44,45,40);;
 }
 
 .language-selector {
@@ -209,7 +209,7 @@
   align-items: center;
   gap: 8px;
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgb(44,45,40, 0.7);
 }
 
 .globe-icon {
@@ -218,7 +218,7 @@
 
 .footer-copyright {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(44,45,40, 0.5);
 }
 
 .footer-copyright p {

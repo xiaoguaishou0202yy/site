@@ -55,7 +55,7 @@
                     <img src="@/assets/testpic.jpg" alt="">
                 </SwiperSlide>
             </Swiper>
-        </div>
+        </div>~
     </div>
 </template>
 
