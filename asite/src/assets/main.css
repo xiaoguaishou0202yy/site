@@ -4,7 +4,7 @@
 /* 根元素变量定义（扩展 base.css） */
 :root {
   /* 主题颜色 */
-  --primary-color: #D2691E; /* 橙棕色 - 从logo提取 */
+  --primary-color: #8c50db; /* 橙棕色 - 从logo提取 */
   --primary-hover: #B8560F;
   
   /* 间距系统 */
