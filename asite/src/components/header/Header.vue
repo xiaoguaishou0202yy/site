@@ -12,7 +12,6 @@ const toggleMobileMenu = () => {
 const closeMobileMenu = () => {
   isMobileMenuOpen.value = false
 }
-
 </script>
 
 <template>
@@ -20,9 +19,9 @@ const closeMobileMenu = () => {
     <div class="header-bg"></div>
     <div class="container header-content">
       <a href="/" class="logo">
-        <img src="@/assets/logol.png" alt="M&B Remodeling">
+        <img src="@/assets/logol.png" alt="M&B Remodeling" />
       </a>
-      
+
       <!-- 桌面端导航 -->
       <nav class="nav-desktop">
         <RouterLink to="/">主页</RouterLink>
@@ -30,12 +29,12 @@ const closeMobileMenu = () => {
         <RouterLink to="/product">产品介绍</RouterLink>
         <RouterLink to="/contact">联系我们</RouterLink>
       </nav>
-      
+
       <!-- 移动端汉堡菜单按钮 -->
-      <button 
-        class="hamburger-btn" 
+      <button
+        class="hamburger-btn"
         @click="toggleMobileMenu"
-        :class="{ 'active': isMobileMenuOpen }"
+        :class="{ active: isMobileMenuOpen }"
         aria-label="菜单"
       >
         <span></span>
@@ -43,7 +42,7 @@ const closeMobileMenu = () => {
         <span></span>
       </button>
     </div>
-    
+
     <!-- 移动端下拉菜单 -->
     <transition name="slide">
       <nav v-if="isMobileMenuOpen" class="nav-mobile">
@@ -77,7 +76,7 @@ const closeMobileMenu = () => {
   top: 0;
   bottom: 0;
   background-color: var(--color-background); /* 🎨 首次使用：base.css 中定义的背景色变量 */
-  box-shadow: var(--shadow-sm); /* 🎨 首次使用：main.css 中定义的阴影变量 */
+
   z-index: 1;
 }
 
@@ -202,7 +201,7 @@ const closeMobileMenu = () => {
   color: #666666;
   font-size: 16px;
   text-decoration: none;
-  border-bottom: 1px solid #E5E5E5;
+  border-bottom: 1px solid #e5e5e5;
   transition: all var(--transition-base);
 }
 
@@ -248,7 +247,7 @@ const closeMobileMenu = () => {
   .nav-desktop {
     gap: var(--spacing-md); /* 进一步减小间距 */
   }
-  
+
   .nav-desktop a {
     font-size: 14px;
   }
@@ -259,17 +258,17 @@ const closeMobileMenu = () => {
   .logo {
     height: 60px;
   }
-  
+
   /* 隐藏桌面导航 */
   .nav-desktop {
     display: none;
   }
-  
+
   /* 显示汉堡菜单按钮 */
   .hamburger-btn {
     display: flex;
   }
-  
+
   /* 显示移动端导航 */
   .nav-mobile {
     display: block;
@@ -281,7 +280,7 @@ const closeMobileMenu = () => {
   .logo {
     height: 50px;
   }
-  
+
   .nav-mobile a {
     padding: var(--spacing-sm) 0;
     font-size: 15px;

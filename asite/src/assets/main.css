@@ -5,8 +5,8 @@
 :root {
   /* 主题颜色 */
   --primary-color: #8c50db; /* 橙棕色 - 从logo提取 */
-  --primary-hover: #B8560F;
-  
+  --primary-hover: #b8560f;
+
   /* 间距系统 */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -14,7 +14,7 @@
   --spacing-lg: 2rem;
   --spacing-xl: 3rem;
   --spacing-2xl: 4rem;
-  
+
   /* 字体大小 */
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
@@ -25,18 +25,18 @@
   --font-size-3xl: 2rem;
   --font-size-4xl: 2.5rem;
   --font-size-5xl: 3rem;
-  
+
   /* 圆角 */
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 12px;
   --radius-full: 9999px;
-  
+
   /* 阴影 */
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
-  
+
   /* 过渡效果 */
   --transition-fast: 0.15s ease;
   --transition-base: 0.3s ease;
@@ -53,22 +53,18 @@
 /* Body 样式调整 */
 body {
   padding-top: 70px; /* header 高度 */
-  font-family: 
-    -apple-system,
-    BlinkMacSystemFont,
-    "PingFang SC",
-    "Noto Sans SC",
-    "Source Han Sans SC",
-    "HarmonyOS Sans SC",
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    Arial,
-    sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Noto Sans SC', 'Source Han Sans SC',
+    'HarmonyOS Sans SC', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 /* 标题样式 */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 600;
   line-height: 1.3;
   margin-bottom: var(--spacing-md);
@@ -158,43 +154,49 @@ img {
 }
 
 /* 列表样式 */
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
 /* 容器样式 */
 .container {
+  --container-padding: 80px; /* 添加CSS变量 */
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 80px;
+  padding: 0 var(--container-padding);
 }
 
 /* 🎨 全局响应式页边距系统 */
 /* 中等屏幕 */
 @media (max-width: 1200px) {
   .container {
-    padding: 0 var(--spacing-xl); /* 48px */
+    --container-padding: var(--spacing-xl); /* 48px */
+    padding: 0 var(--container-padding);
   }
 }
 
 /* 小屏幕 - 减小页边距 */
 @media (max-width: 1024px) {
   .container {
-    padding: 0 var(--spacing-md); /* 24px */
+    --container-padding: var(--spacing-md); /* 24px */
+    padding: 0 var(--container-padding);
   }
 }
 
 /* 平板 */
 @media (max-width: 768px) {
   .container {
-    padding: 0 var(--spacing-sm); /* 16px */
+    --container-padding: var(--spacing-sm); /* 16px */
+    padding: 0 var(--container-padding);
   }
 }
 
 /* 手机 - 最小页边距 */
 @media (max-width: 480px) {
   .container {
-    padding: 0 var(--spacing-xs); /* 8px */
+    --container-padding: var(--spacing-xs); /* 8px */
+    padding: 0 var(--container-padding);
   }
 }
 
@@ -211,36 +213,60 @@ ul, ol {
   text-align: left;
 }
 
-.mt-sm { margin-top: var(--spacing-sm); }
-.mt-md { margin-top: var(--spacing-md); }
-.mt-lg { margin-top: var(--spacing-lg); }
+.mt-sm {
+  margin-top: var(--spacing-sm);
+}
+.mt-md {
+  margin-top: var(--spacing-md);
+}
+.mt-lg {
+  margin-top: var(--spacing-lg);
+}
 
-.mb-sm { margin-bottom: var(--spacing-sm); }
-.mb-md { margin-bottom: var(--spacing-md); }
-.mb-lg { margin-bottom: var(--spacing-lg); }
+.mb-sm {
+  margin-bottom: var(--spacing-sm);
+}
+.mb-md {
+  margin-bottom: var(--spacing-md);
+}
+.mb-lg {
+  margin-bottom: var(--spacing-lg);
+}
 
-.pt-sm { padding-top: var(--spacing-sm); }
-.pt-md { padding-top: var(--spacing-md); }
-.pt-lg { padding-top: var(--spacing-lg); }
+.pt-sm {
+  padding-top: var(--spacing-sm);
+}
+.pt-md {
+  padding-top: var(--spacing-md);
+}
+.pt-lg {
+  padding-top: var(--spacing-lg);
+}
 
-.pb-sm { padding-bottom: var(--spacing-sm); }
-.pb-md { padding-bottom: var(--spacing-md); }
-.pb-lg { padding-bottom: var(--spacing-lg); }
+.pb-sm {
+  padding-bottom: var(--spacing-sm);
+}
+.pb-md {
+  padding-bottom: var(--spacing-md);
+}
+.pb-lg {
+  padding-bottom: var(--spacing-lg);
+}
 
 /* 响应式断点 */
 @media (max-width: 768px) {
   html {
     font-size: 14px;
   }
-  
+
   h1 {
     font-size: var(--font-size-4xl);
   }
-  
+
   h2 {
     font-size: var(--font-size-3xl);
   }
-  
+
   .container {
     padding: 0 var(--spacing-sm);
   }
