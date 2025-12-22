@@ -20,7 +20,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section class="banner">
+  <section class="banner page-section">
     <!-- 背景图片层 - 视差滚动（全宽） -->
     <div class="banner-bg" :style="{ transform: `translateY(${parallaxOffset}px)` }">
       <div class="container banner-bg-container">
@@ -113,31 +113,32 @@ onUnmounted(() => {
 .banner-title {
   color: #ffffff;
   font-size: 64px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: var(--spacing-lg);
   text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
   line-height: 1.2;
   max-width: 800px;
 }
 
+
 /* 按钮样式 */
 .banner-btn {
-  background-color: var(--primary-color); /* 🎨 使用主色调 */
+  background-color: var(--primary-dark);
   color: #ffffff;
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-base);
   font-weight: 500;
-  padding: var(--spacing-sm) var(--spacing-xl); /* 🎨 使用间距变量 */
+  padding: var(--spacing-sm) var(--spacing-xl);
   border: none;
-  border-radius: var(--radius-sm); /* 🎨 使用圆角变量 */
+  border-radius: 0;
   cursor: pointer;
-  transition: all var(--transition-base); /* 🎨 使用过渡变量 */
-  box-shadow: 0 4px 12px rgba(210, 105, 30, 0.3);
+  transition: all var(--transition-base);
+  align-self: flex-start;
 }
 
 .banner-btn:hover {
-  background-color: var(--primary-hover);
+  background-color: var(--primary-color);
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(210, 105, 30, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .banner-btn:active {

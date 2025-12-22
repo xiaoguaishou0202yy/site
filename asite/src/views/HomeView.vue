@@ -2,7 +2,8 @@
 
 import Header from '../components/header/Header.vue'
 import Banner from '../components/banner/Banner.vue'
-import Bannerhalf from '../components/Bannerhalf.vue'
+import IntroSection from '../components/IntroSection.vue'
+import Value from '../components/Value.vue'
 import Footer from '../components/footer/Footer.vue'
 </script>
 
@@ -10,7 +11,8 @@ import Footer from '../components/footer/Footer.vue'
   <main>
     <Header></Header>
     <Banner></Banner>
-    <Bannerhalf></Bannerhalf>
+    <IntroSection></IntroSection>
+    <Value></Value>
     <Footer></Footer>
 
 

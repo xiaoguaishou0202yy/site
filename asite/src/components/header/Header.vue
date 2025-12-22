@@ -15,7 +15,7 @@ const closeMobileMenu = () => {
 </script>
 
 <template>
-  <header class="header">
+  <header class="header page-section">
     <div class="header-bg"></div>
     <div class="container header-content">
       <a href="/" class="logo">

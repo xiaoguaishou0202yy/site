@@ -1,16 +1,15 @@
 <script setup>
 
 import Header from '../components/header/Header.vue'
+import About from '../components/about/About.vue'
 import Footer from '../components/footer/Footer.vue'
 </script>
 
 
 <template>
   <Header></Header>
-  <div class="about">
-    <h1>This is an about page</h1>
-    <p>公司介绍</p>
-  </div>
+  <About></About>
+
   <Footer></Footer>
 </template>
 

@@ -5,7 +5,7 @@ import { ref } from 'vue'
 <template>
   <div class="unobox-page">
     <!-- 第一部分：UnoBox通用智能决策模块 -->
-    <section class="section section-intro">
+    <section class="section page-section">
       <div class="section-content">
         <div class="section-header">
           <h2 class="section-title">UnoBox通用智能决策模块</h2>

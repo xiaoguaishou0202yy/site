@@ -5,15 +5,20 @@
 :root {
   /* 主题颜色 */
   --primary-color: #8c50db; /* 橙棕色 - 从logo提取 */
-  --primary-hover: #b8560f;
+  --primary-hover: #d672df;
+
+  --primary-dark: #412566;
 
   /* 间距系统 */
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 1.5rem;
-  --spacing-lg: 2rem;
-  --spacing-xl: 3rem;
-  --spacing-2xl: 4rem;
+  --spacing-xs: 0.5rem;   /* 8px - 极小间距 */
+  --spacing-sm: 1rem;     /* 16px - 小间距 */
+  --spacing-md: 1.5rem;   /* 24px - 中等间距 */
+  --spacing-lg: 2rem;     /* 32px - 大间距 */
+  --spacing-xl: 3rem;     /* 48px - 超大间距 */
+  --spacing-2xl: 4rem;    /* 64px - 2倍超大间距 */
+  --spacing-3xl: 5rem;    /* 80px - 3倍超大间距 */
+  --spacing-4xl: 6rem;    /* 96px - 4倍超大间距 */
+  --spacing-5xl: 8rem;    /* 128px - 5倍超大间距 */
 
   /* 字体大小 */
   --font-size-xs: 0.75rem;
@@ -200,6 +205,43 @@ ol {
   }
 }
 
+
+/* 🎨 文字内容专用响应式边距系统 */
+/* 用于长文本内容，比 container 边距更宽，让文字有更多呼吸空间 */
+:root {
+  --text-padding: 15rem; /* 240px - 默认大屏幕 */
+}
+
+/* 中等屏幕 */
+@media (max-width: 1200px) {
+  :root {
+    --text-padding: 10rem; /* 160px */
+  }
+}
+
+/* 小屏幕 */
+@media (max-width: 1024px) {
+  :root {
+    --text-padding: 6rem; /* 96px */
+  }
+}
+
+/* 平板 */
+@media (max-width: 768px) {
+  :root {
+    --text-padding: 3rem; /* 48px */
+  }
+}
+
+/* 手机 */
+@media (max-width: 480px) {
+  :root {
+    --text-padding: 1.5rem; /* 24px */
+  }
+}
+
+
+
 /* 实用工具类 */
 .text-center {
   text-align: center;
@@ -295,4 +337,26 @@ ol {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+
+/* 🎨 页面区块统一间距系统 */
+.page-section {
+  margin-bottom: var(--spacing-4xl);
+}
+
+.page-section:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .page-section {
+    margin-bottom: var(--spacing-2xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .page-section {
+    margin-bottom: var(--spacing-xl);
+  }
 }
