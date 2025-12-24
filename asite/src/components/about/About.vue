@@ -11,8 +11,6 @@ const visionContent = ref({
   description: '致力于成为具身智能领域的领先企业，通过创新的视觉技术和智能解决方案，推动机器人产业的发展与变革。我们坚持以客户需求为导向，持续深耕垂直应用场景，为各行业提供高效、可靠的智能化解决方案，助力产业升级与数字化转型。'
 })
 
-// 图片路径 - 请替换为实际图片路径
-const imageUrl = ref('/path-to-your-image.jpg')
 </script>
 
 <template>
@@ -26,7 +24,7 @@ const imageUrl = ref('/path-to-your-image.jpg')
 
       <!-- 全宽图片 -->
       <div class="full-width-image">
-        <img :src="imageUrl" alt="公司形象" />
+        <img src="@/assets/fetch.png" alt="公司形象" />
       </div>
 
       <!-- 第二段文字 -->
