@@ -11,6 +11,20 @@ const visionContent = ref({
   description: '致力于成为具身智能领域的领先企业，通过创新的视觉技术和智能解决方案，推动机器人产业的发展与变革。我们坚持以客户需求为导向，持续深耕垂直应用场景，为各行业提供高效、可靠的智能化解决方案，助力产业升级与数字化转型。'
 })
 
+// 监听滚动事件实现视差效果
+const handleScroll = () => {
+  // 图片滚动速度是文字的 0.5 倍（更慢）
+  parallaxOffset.value = window.scrollY * 0.5
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
+
 </script>
 
 <template>
@@ -23,7 +37,7 @@ const visionContent = ref({
       </div>
 
       <!-- 全宽图片 -->
-      <div class="full-width-image">
+      <div class="full-width-image" :style="{ transform: `translateY(${parallaxOffset}px)` }">
         <img src="@/assets/fetch.png" alt="公司形象" />
       </div>
 
