@@ -200,7 +200,6 @@ onUnmounted(() => {
 .scenarios-section {
   width: 100%;
   margin-top: var(--spacing-4xl);
-  background-color: #ffffff;
   padding: 0;
 }
 
@@ -216,23 +215,23 @@ onUnmounted(() => {
   flex-direction: column;
 }
 
-/* 文字卡片 */
+/* 文字卡片 - 固定高度与图片一致 */
 .scenario-text-card {
   width: 100%;
-  min-height: 280px;
+  height: 320px; /* 与图片高度一致 */
   padding: var(--spacing-xl);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #e8e8e8;
+  background-color: #efefef;
 }
 
-/* 图片卡片 */
+/* 图片卡片 - 固定高度 */
 .scenario-image-card {
   width: 100%;
-  height: 350px;
+  height: 320px; /* 固定高度 */
   overflow: hidden;
   background-color: #d0d0d0;
 }
@@ -243,11 +242,6 @@ onUnmounted(() => {
   object-fit: cover;
   object-position: center;
   display: block;
-  transition: transform 0.3s ease;
-}
-
-.scenario-image-card:hover img {
-  transform: scale(1.05);
 }
 
 .scenario-title {
@@ -269,11 +263,11 @@ onUnmounted(() => {
 /* 大屏幕 */
 @media (min-width: 1440px) {
   .scenario-image-card {
-    height: 400px;
+    height: 380px;
   }
 
   .scenario-text-card {
-    min-height: 300px;
+    height: 380px;
   }
 
   .scenario-title {
@@ -288,16 +282,16 @@ onUnmounted(() => {
 /* 笔记本 */
 @media (max-width: 1280px) {
   .scenario-image-card {
-    height: 320px;
+    height: 300px;
   }
 
   .scenario-text-card {
-    min-height: 260px;
+    height: 300px;
     padding: var(--spacing-lg);
   }
 }
 
-/* 平板 */
+/* 平板 - 最小2列 */
 @media (max-width: 1024px) {
   .about-title {
     font-size: 2.5rem;
@@ -313,11 +307,11 @@ onUnmounted(() => {
   }
 
   .scenario-image-card {
-    height: 300px;
+    height: 280px;
   }
 
   .scenario-text-card {
-    min-height: 240px;
+    height: 280px;
   }
 
   .scenario-title {
@@ -329,7 +323,7 @@ onUnmounted(() => {
   }
 }
 
-/* 平板小屏 */
+/* 平板小屏 - 保持2列 */
 @media (max-width: 768px) {
   .about-section {
     padding: var(--spacing-3xl) 0;
@@ -350,17 +344,17 @@ onUnmounted(() => {
     margin-bottom: var(--spacing-3xl);
   }
 
-  /* 改为单列 */
+  /* 保持2列 */
   .scenarios-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .scenario-image-card {
-    height: 280px;
+    height: 250px;
   }
 
   .scenario-text-card {
-    min-height: 200px;
+    height: 250px;
   }
 
   .scenario-title {
@@ -368,7 +362,7 @@ onUnmounted(() => {
   }
 }
 
-/* 手机 */
+/* 手机 - 保持2列 */
 @media (max-width: 480px) {
   .about-title {
     font-size: 1.75rem;
@@ -384,11 +378,11 @@ onUnmounted(() => {
   }
 
   .scenario-image-card {
-    height: 250px;
+    height: 220px;
   }
 
   .scenario-text-card {
-    min-height: 180px;
+    height: 220px;
     padding: var(--spacing-md);
   }
 
