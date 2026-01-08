@@ -6,8 +6,8 @@ const currentFeatureIndex = ref(0)
 const features = [
   {
     id: 'unpilot',
-    title: 'UnoPilot',
-    subtitle: '纯视觉驾驶地图导航',
+    title: 'UnoPilot纯视觉导航系统',
+    subtitle: '',
     description: [
       '手推车、固定翼。仅靠平面图。GPS地磁整至手绘图即可实现跨场景全面大范围导航能导航。',
       'UnoPilot为多种传感器配置提供灵活适用导航方案：阿克曼转向底盘、全向移动底盘等导航底盘。'
@@ -16,8 +16,8 @@ const features = [
   },
   {
     id: 'unoarm',
-    title: 'UnoArm',
-    subtitle: '纯视觉机械臂操作',
+    title: 'UnoArm视觉机械臂操作',
+    subtitle: '',
     description: [
       'UnoArm基于纯视觉技术，以深棉测的运动学模型和动态反馈制间。实现机械臂在复杂环境中执行高精度操作。'
     ],
