@@ -37,7 +37,7 @@ const submitForm = () => {
 onMounted(() => {
   // 动态加载高德地图API
   const script = document.createElement('script')
-  script.src = 'https://webapi.amap.com/maps?v=2.0&key=YOUR_AMAP_KEY' // 请替换为您的高德地图key
+  script.src = `https://webapi.amap.com/maps?v=2.0&key=${import.meta.env.VITE_AMAP_KEY}` // 请替换为您的高德地图key
   script.onload = initMap
   document.head.appendChild(script)
 })
@@ -46,7 +46,7 @@ const initMap = () => {
   // 创建地图实例
   const map = new AMap.Map('map-container', {
     zoom: 16,
-    center: [120.738, 31.315], // 苏州工业园区坐标,请根据实际地址调整
+    center: [120.7672, 31.2997], 
     mapStyle: 'amap://styles/light'
   })
 
@@ -75,7 +75,7 @@ const initMap = () => {
     <div class="contact-container">
       <!-- 左侧信息 -->
       <div class="left-section">
-        <h1 class="main-title">让我们一起探讨您的下一个项目</h1>
+        <h1 class="main-title">联系我们！</h1>
         <p class="subtitle">填写表单,或致电我们<br/>预约免费上门咨询。</p>
 
         <div class="info-blocks">

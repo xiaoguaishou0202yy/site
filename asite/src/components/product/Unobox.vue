@@ -78,8 +78,11 @@ onUnmounted(() => {
               <p>在传感器数据融合作用下，主控集成到各类机器人本体，充当其"眼睛"和"大脑"，借助这套系统，机器人能够在大规模复杂环境中自主导航，并完成精准的机械臂操作任务。</p>
             </div>
           </div>
-          <div class="hero-image">
-            <img src="@/assets/unoboxgrey.png" alt="UnoBox产品">
+          <div class="hero-video">
+            <video controls autoplay muted loop>
+              <source src="@/assets/unoboxv.mp4" type="video/mp4">
+              您的浏览器不支持视频播放。
+            </video>
           </div>
         </div>
       </div>
@@ -261,18 +264,19 @@ onUnmounted(() => {
   margin: 0 0 var(--spacing-md) 0;
 }
 
-.hero-image {
+.hero-video {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.hero-image img {
+.hero-video video {
   width: 100%;
   height: auto;
   display: block;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  pointer-events: none; /* 防止用户点击视频 */
 }
 
 /* 分隔标语区域 */

@@ -36,7 +36,7 @@
         <div class="footer-column">
           <h3>加入我们</h3>
           <ul>
-            <li><a href="#">在招职位</a></li>
+            <li><a href="https://www.liepin.com/company-jobs/21295751/" target="_blank">在招职位</a></li>
           </ul>
         </div>
 
